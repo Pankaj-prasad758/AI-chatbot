@@ -3,6 +3,7 @@ const messageInput = document.querySelector(".message-input");
 const sendMessageButton = document.querySelector("#send-message");
 const fileInput = document.querySelector("#file-input");
 const fileUploadWrapper = document.querySelector(".file-upload-wrapper")
+const fileCancelButton = document.querySelector("#file-cancel")
 
 //API setup
 const API_KEY = "AIzaSyD438rLOLfryHeGtmUj53VIWNH-b0L1jks";
@@ -122,7 +123,7 @@ messageInput.addEventListener("keydown", (e) => {
   }
 });
 
-//handle file input change
+//handle file input change and preview the selected file
 fileInput.addEventListener("change", () => {
   const file = fileInput.files[0];
   if (!file) return;
@@ -143,6 +144,13 @@ fileInput.addEventListener("change", () => {
   };
   reader.readAsDataURL(file);
 });
+
+//cancel file upload
+fileCancelButton.addEventListener("click",() => {
+  userData.file = {};
+  fileUploadWrapper.classList.remove("file-uploaded")
+})
+
 
 sendMessageButton.addEventListener("click", (e) => {
   handleOutgoingMessage(e);

@@ -265,16 +265,25 @@ background: #3d39ac;
     position: absolute;
     height: 100%;
     width: 100%;
- 
+    display: none;
     object-fit: cover;
     border-radius: 50%;
  }
  
- .chat-form .file-upload-wrapper #file-cancel {
+
+ .chat-form .file-upload-wrapper .file-uploaded img{
+    display: block;
+ }
+
+  .chat-form .file-upload-wrapper #file-cancel {
     color: #ff0000;
     background: #fff;
- } 
+ }  
 
+  
+ .chat-form .file-upload-wrapper .file-uploaded #send-message{
+    display: none;
+ }
 
  .chat-form .file-upload-wrapper :where(img, #file-cancel),
  .chat-form .file-upload-wrapper .file-uploaded #file-upload {
@@ -284,4 +293,4 @@ background: #3d39ac;
  .chat-form .file-upload-wrapper .file-uploaded img,
  .chat-form .file-upload-wrapper .file-uploaded:hover #file-cancel{
     display: block;
- }
+ } 
