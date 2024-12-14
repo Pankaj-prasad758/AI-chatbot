@@ -199,6 +199,7 @@ transform: translateY(-4px);
     background: #fff;
     border-radius: 32px;
     outline: 1px solid #cccce5;
+    position: relative;
  }
 
  .chat-footer .message-input{
@@ -294,3 +295,18 @@ background: #3d39ac;
  .chat-form .file-upload-wrapper .file-uploaded:hover #file-cancel{
     display: block;
  } 
+
+ em-emoji-picker{
+position: absolute;
+left: 50%;
+top: -337px;
+width: 100%;
+max-width: 350px;
+max-height:330px ;
+transform: translateX(-50%);
+visibility: hidden;
+ }
+
+ body.show-emoji-picker  em-emoji-picker{
+   visibility: visible;
+ }
