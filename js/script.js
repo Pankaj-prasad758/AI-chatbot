@@ -6,8 +6,8 @@ const fileUploadWrapper = document.querySelector(".file-upload-wrapper")
 const fileCancelButton = document.querySelector("#file-cancel")
 
 //API setup
-const API_KEY = "AIzaSyD438rLOLfryHeGtmUj53VIWNH-b0L1jks";
-const API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+const API_KEY = "AIzaSyBqhKsqegZhRw49EuMhF5RR2t2vqdbbpoI";
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
 
 const userData = {
   message: null,
